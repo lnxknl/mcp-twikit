@@ -131,8 +131,7 @@ async def post_tweet(
         # Handle tags by converting to mentions
         if tags:
             mentions = ' '.join(f"@{tag.lstrip('@')}" for tag in tags)
-            text = f"{text}
-{mentions}"
+            text = f"{text} {mentions}"
         
         # Upload media if provided
         media_ids = []
